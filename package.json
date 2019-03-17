@@ -1,0 +1,23 @@
+{
+  "name": "saber-list",
+  "version": "0.0.1",
+  "description": "Singly linked list",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saber2pr/saber-list.git"
+  },
+  "author": "saber2pr",
+  "license": "ISC",
+  "files": [
+    "lib/core/*",
+    "lib/index.*"
+  ],
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "node ./lib/test/test.js",
+    "start": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.1"
+  }
+}
