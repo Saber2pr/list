@@ -62,3 +62,14 @@ export const walk = <T extends Component>(fiber: Fiber<T>) => {
   }
   return current.parent.sibling
 }
+
+export function walkAll<T extends Component>(
+  component: T,
+  cat: (component: T) => void
+) {
+  let current = new Fiber(component)
+  while (current) {
+    cat(current.instance)
+    current = walk(current)
+  }
+}
